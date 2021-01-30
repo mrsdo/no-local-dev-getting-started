@@ -11,7 +11,7 @@ end
 
 
 class ApplicationController < ActiveRecord::Base
-  self.table_name = 'salesforce.contact'
+
 end
 
 #get "/contacts" do
