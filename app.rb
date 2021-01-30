@@ -1,4 +1,4 @@
-# app.rb
+# models.rb
 
 require 'sinatra'
 require 'sinatra/activerecord'
@@ -8,11 +8,26 @@ require './environments'
 get "/" do
   erb :home
 end
+# Class
+class ApplicationController < Sinatra::Base
+  register Sinatra::ActiveRecordExtension
+  configure do
+    set :public_folder, 'public'
+    set :views, 'app/views'
+
+  end
+
+  get "/" do
+
+    erb :home
+  end
 
 
-class Contact < ActiveRecord::Base
-  self.table_name = 'salesforce.contact'
 end
+
+# class Contact < ActiveRecord::Base
+#   self.table_name = 'salesforce.contact'
+# end
 
 #get "/contacts" do
 #  @contacts = Contact.all
