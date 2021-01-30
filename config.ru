@@ -2,5 +2,5 @@
 
 require './app'
 $stdout.sync = true
-run Sinatra::Application
+run Sinatra::Base
 use ApplicationController
