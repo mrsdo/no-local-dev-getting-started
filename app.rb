@@ -2,7 +2,7 @@
 
 require 'sinatra'
 require 'sinatra/activerecord'
-require './environments'
+require 'environments'
 
 
 get "/" do
@@ -12,7 +12,6 @@ end
 
 class ApplicationController < ActiveRecord::Base
 
-  self.table_name = 'salesforce.contact'
 end
 
 #get "/contacts" do
