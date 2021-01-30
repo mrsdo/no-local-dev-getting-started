@@ -1,6 +1,6 @@
 
 
-configure :development do
+configure :development, :production do
  set :show_exceptions, true
  set :public_folder, 'public'
  set :views, 'app/views'
