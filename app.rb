@@ -11,8 +11,11 @@ end
 
 
 class ApplicationController < ActiveRecord::Base
-  register Sinatra::ActiveRecordExtension
+  configure do
+    set :public_folder, 'public'
+    set :views, 'app/views'
 
+  end
   self.table_name = 'salesforce.contact'
 end
 
