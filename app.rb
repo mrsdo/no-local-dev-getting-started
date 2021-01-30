@@ -11,6 +11,8 @@ end
 
 
 class ApplicationController < ActiveRecord::Base
+  register Sinatra::ActiveRecordExtension
+
   self.table_name = 'salesforce.contact'
 end
 
