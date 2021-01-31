@@ -15,11 +15,20 @@ test:
   <<: *default
   database: listings_test
 
+  #   DATABASE_URL="postgres://myuser:mypass@localhost/somedatabase"
+  #
+  # You can use this database configuration with:
+  #
+  DATABASE_URL="postgres://lvbsyipxlnjzvf:db94c7c5f909a597735ac3d609b0473070dee24ab111025ab7ffd4dc06100cc2@ec2-75-101-212-64.compute-1.amazonaws.com:5432/d1stml5b21fb20
+  "
 production:
-  adapter: postgresql
-  encoding: unicode
-  pool: 5
-  host: ec2-75-101-212-64.compute-1.amazonaws.com
-  database: postgresql-opaque-21427
-  username: lvbsyipxlnjzvf
-  password: db94c7c5f909a597735ac3d609b0473070dee24ab111025ab7ffd4dc06100cc2
+  url: <%= ENV['DATABASE_URL'] %>
+
+#production:
+#  adapter: postgresql
+#  encoding: unicode
+#  pool: 5
+#  host: ec2-75-101-212-64.compute-1.amazonaws.com
+#  database: postgresql-opaque-21427
+#  username: lvbsyipxlnjzvf
+#  password: db94c7c5f909a597735ac3d609b0473070dee24ab111025ab7ffd4dc06100cc2
