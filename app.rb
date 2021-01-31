@@ -3,10 +3,15 @@
 require 'sinatra'
 require 'sinatra/activerecord'
 require './environments'
+# require_relative './app/controllers/role_controller'
 
 
 get "/" do
   erb :welcome
+end
+
+get '/roles' do
+  erb :"/roles/index.html"
 end
 
 
