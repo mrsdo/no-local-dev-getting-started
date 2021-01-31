@@ -16,10 +16,11 @@ test:
   database: listings_test
 
 production:
-  adapter: postgresql
-  encoding: unicode
-  pool: 5
-  host: ec2-75-101-212-64.compute-1.amazonaws.com
-  database: d1stml5b21fb20
-  username: lvbsyipxlnjzvf
-  password: db94c7c5f909a597735ac3d609b0473070dee24ab111025ab7ffd4dc06100cc2
+  url: postgres://lvbsyipxlnjzvf:db94c7c5f909a597735ac3d609b0473070dee24ab111025ab7ffd4dc06100cc2@ec2-75-101-212-64.compute-1.amazonaws.com:5432/d1stml5b21fb20
+#  adapter: postgresql
+#  encoding: unicode
+#  pool: 5
+#  host: ec2-75-101-212-64.compute-1.amazonaws.com
+#  database: d1stml5b21fb20
+#  username: lvbsyipxlnjzvf
+#  password: db94c7c5f909a597735ac3d609b0473070dee24ab111025ab7ffd4dc06100cc2
